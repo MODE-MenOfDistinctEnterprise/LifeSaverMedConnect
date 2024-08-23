@@ -1,0 +1,17 @@
+{% comment %} # Create templates for patient management
+# File: ehr/templates/ehr/patient_list.html {% endcomment %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Patient List</title>
+</head>
+<body>
+    <h1>Patients</h1>
+    <ul>
+        {% for patient in patients %}
+        <li>{{ patient.name }}</li>
+        {% endfor %}
+    </ul>
+</body>
+</html>

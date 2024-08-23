@@ -1,0 +1,16 @@
+{% comment %} # Create templates for patient management # File:
+ehr/templates/ehr/add_patient.html {% endcomment %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Add Patient</title>
+  </head>
+  <body>
+    <h1>Add New Patient</h1>
+    <form method="post">
+      {% csrf_token %} {{ form.as_p }}
+      <button type="submit">Add</button>
+    </form>
+  </body>
+</html>
