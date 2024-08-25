@@ -19,12 +19,18 @@ from django.urls import include, path
 from ehr.views import index
 from ehr.views import add_patient
 from ehr.views import patient_list
+from booking.views import book_appointment
+from booking.views import booking_list
+
 
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('ehr/', include('ehr.urls')),
+    path('booking/', include('booking.urls')),
     path('', index),
     path('add/', add_patient),
     path('list/', patient_list),
+    path('book/', book_appointment),
+    path('list/', booking_list),
 ]
 

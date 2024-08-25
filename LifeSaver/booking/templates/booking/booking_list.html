@@ -1,0 +1,20 @@
+{% comment %} {% comment %} # File: booking/templates/booking/booking_list.html
+{% endcomment %} {% endcomment %}
+
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>Booking List</title>
+  </head>
+  <body>
+    <h1>Appointments</h1>
+    <ul>
+      {% for booking in bookings %}
+      <li>
+        {{ booking.patient.name }} - {{ booking.appointment_date }} {{
+        booking.appointment_time }} with {{ booking.doctor_name }}
+      </li>
+      {% endfor %}
+    </ul>
+  </body>
+</html>

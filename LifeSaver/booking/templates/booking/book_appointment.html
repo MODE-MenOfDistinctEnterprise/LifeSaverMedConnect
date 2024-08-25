@@ -1,0 +1,16 @@
+{% comment %} # Create templates for booking management
+# File: booking/templates/booking/book_appointment.html {% endcomment %}
+
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Book Appointment</title>
+</head>
+<body>
+    <h1>Book New Appointment</h1>
+    <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit">Book</button>
+    </form>
+</body>
